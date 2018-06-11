@@ -1,32 +1,31 @@
-const JSONarray = require('./userData.json');
-
+const data = require('./userData.json');
 
 module.exports = {
     getAllUsers: (req, res) => {
-        // if (req.query !== -1)  {
-        //     res.status(200).send(JSONarray)
-        //  }
-
-         if (req.query.age) {
-         console.log(+req.query.age)
-        res.status(200).send()
-
+        // const {age, lastname, email, favorites} = req.query
+        let userData = [];
+        if()
+        else if (req.query.age) {
+            data.filter( userAge => userAge.age < +req.query.age)
         } 
-        // else if (req.query.lastname) {
-        //  console.log(req.query.lastname)
-        //     res.status(200).send(JSONarray)
-
-        // } 
-        // else if (req.query.email) {
-        //     console.log(req.query.email)
-        //     res.status(200).send(JSONarray)
-
-        // } 
-
-        else {
+        else if (req.query.lastname) {
+            data.filter( userLastName => userLastName.last_name === req.query.lastname)
+            userData.push(userLastName)
+        } 
+        else if (req.query.email) {
+            data.filter( userEmail => userEmail.email === req.query.email)
+            userData.push(userEmail)
+        } else if (req.query.favorites) {
+            data.filter(fav => fav.favorites[0])
+            userData.push(fav)
+        }  else {
+           res.status(200).send(userData)
+            }
+            res.status(200).send(userData)
             res.status(500).send(console.log('These are not the droids you are looking for.'))
         }
-    },
+    }
+    }
     // getUserById: (req, res, next) => {
     //     if(req.params.userId) {
     //        let user = data.filter( (id, i) => data[i].id )
@@ -35,4 +34,4 @@ module.exports = {
     //         res.status(500).send(console.log('these are not the droids you are looking for.'))
     //     }
     // }
-}
+// }
