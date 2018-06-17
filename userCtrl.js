@@ -25,7 +25,8 @@ module.exports = {
             res.status(500).send(console.log('These are not the droids you are looking for.'))
         }
     }
-    }
+    },
+    aaaaaaaaaaaaaaaa
     // getUserById: (req, res, next) => {
     //     if(req.params.userId) {
     //        let user = data.filter( (id, i) => data[i].id )
