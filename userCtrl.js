@@ -4,8 +4,7 @@ module.exports = {
     getAllUsers: (req, res) => {
         // const {age, lastname, email, favorites} = req.query
         let userData = [];
-        if()
-        else if (req.query.age) {
+         if (req.query.age) {
             data.filter( userAge => userAge.age < +req.query.age)
         } 
         else if (req.query.lastname) {
@@ -25,9 +24,8 @@ module.exports = {
             res.status(500).send(console.log('These are not the droids you are looking for.'))
         }
     }
-    },
-    aaaaaaaaaaaaaaaa
-    // getUserById: (req, res, next) => {
+    }
+        // getUserById: (req, res, next) => {
     //     if(req.params.userId) {
     //        let user = data.filter( (id, i) => data[i].id )
     //         res.status(200).send(user)
